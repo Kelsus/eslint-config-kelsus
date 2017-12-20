@@ -1,0 +1,43 @@
+{
+  "name": "eslint-config-kelsus",
+  "version": "0.0.1",
+  "description": "ESLint shareable config for the Kelsus style",
+  "license": "Apache-2.0",
+  "repository": "kelsus/eslint-config-kelsus",
+  "author": "Kelsus",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "kelsus",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "jscs",
+    "jshint",
+    "jslint",
+    "eslint",
+    "validate",
+    "code style",
+    "strict",
+    "check",
+    "checker",
+    "verify",
+    "enforce",
+    "hint"
+  ],
+  "devDependencies": {
+    "eslint": "^4.1.1"
+  },
+  "peerDependencies": {
+    "eslint": ">=4.1.1"
+  }
+}
