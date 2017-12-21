@@ -14,7 +14,7 @@ Once the `eslint-config-kelsus` package is installed, you can use it by specifyi
 
 ### Create a config file.
 ```sh
-touch .prettierrc.json
+touch .eslintrc.json
 ```
 Add `eslint` configuration to it.
 ```js
@@ -31,6 +31,7 @@ Add `eslint` configuration to it.
 There are several rules in the [`eslint:recommended` ruleset](http://eslint.org/docs/rules/) that Kelsus style enforces in your project.
 
 To see how the `kelsus` config compares with `eslint:recommended`, refer to the [source code of `index.js`](https://github.com/kelsus/eslint-config-kelsus/blob/master/index.js), which lists every ESLint rule along with whether (and how) it is enforced by the `kelsus` config.
+
 ### Create a `.eslintignore` config file.
 
 ```bash
@@ -55,9 +56,6 @@ publish/*
 
 # Ignore the dosc folder because is used for documentation files, no need of linting
 /docs/*
-
-# Ignore the client folder if is generated via gulp-apidoc, no need of linting
-# /client/*
 ```
 
 # PRETTIER
@@ -70,6 +68,7 @@ On Kelsus, we use [Prettier](https://prettier.io) as source for Opinionated Code
 ## Installation
 
 ```
+$ yarn add eslint-config-prettier --dev
 $ yarn add eslint-plugin-prettier --dev
 ```
 
