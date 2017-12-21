@@ -103,6 +103,20 @@ Add `prettier` configuration to the `package.json`.
 * "lint": This script will report errors and warnings of your code, based on the eslint-rules of your configuration.
 * "lint-errors": This script will report only errors of your code, based on the eslint-rules of your configuration.
 
+# DOCKER
+
+Adding an extra step on your build process, will ensure that the code is passing the linting rules.
+
+So, right before your `npm run test` you can call `npm run lint-errors`.
+
+```bash
+# Run the linter
+npm run lint-errors
+
+# Run the tests
+npm run test
+```
+
 # TOOLS
 
 ## Install & Configure Visual Studio's Extensions
