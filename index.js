@@ -18,6 +18,10 @@
 
 module.exports = {
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
+  env: {
+    es6: true,
+    node: true
+  },
   rules: {
     // The rules below are listed in the order they appear on the eslint
     // rules page. All rules are listed to make it easier to keep in sync

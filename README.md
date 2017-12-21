@@ -12,16 +12,17 @@ $ yarn add eslint eslint-config-kelsus --dev
 
 Once the `eslint-config-kelsus` package is installed, you can use it by specifying `kelsus` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
 
-### Create a config file.
-```bash
-touch .eslintrc.json
-```
-Add `eslint` configuration to it.
+### Setup config.
+
+Add `eslint` configuration to the `package.json`.
+
 ```js
 {
-  "extends": "kelsus",
-  "rules": {
-    // Additional, per-project rules...
+  "eslintConfig": {
+    "extends": ["kelsus"],
+    "rules": {
+      // Additional, per-project rules...
+    }
   }
 }
 ```
@@ -32,7 +33,7 @@ There are several rules in the [`eslint:recommended` ruleset](http://eslint.org/
 
 To see how the `kelsus` config compares with `eslint:recommended`, refer to the [source code of `index.js`](https://github.com/kelsus/eslint-config-kelsus/blob/master/index.js), which lists every ESLint rule along with whether (and how) it is enforced by the `kelsus` config.
 
-### Create a `.eslintignore` config file.
+### Create an `.eslintignore` config file.
 
 ```bash
 touch .eslintignore
@@ -64,14 +65,28 @@ On Kelsus, we use [Prettier](https://prettier.io) as source for Opinionated Code
 
 > `kelsus` ESLint configuration already extends `prettier` that will turns off all rules that are unnecessary or might conflict with Prettier.
 
-
 ## Installation
 
 ```js
-yarn add --dev prettier eslint-plugin-prettier
+yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
-## Add scripts to your `package.json`
+## Setup config.
+
+Add `prettier` configuration to the `package.json`.
+
+```js
+{
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  },
+}
+```
+
+# SCRIPTS
+
+## To run add scripts to your `package.json`
 
 ```json
 "scripts": {
@@ -88,6 +103,8 @@ yarn add --dev prettier eslint-plugin-prettier
 * "lint": This script will report errors and warnings of your code, based on the eslint-rules of your configuration.
 * "lint-errors": This script will report only errors of your code, based on the eslint-rules of your configuration.
 
+# TOOLS
+
 ## Install & Configure Visual Studio's Extensions
 
 1. Install Prettier extention in Visual Studio -
@@ -98,15 +115,17 @@ yarn add --dev prettier eslint-plugin-prettier
    keybindings.json
 
    ```json
-   [     
+   [
      {
        "key": "ctrl+l",
        "command": "eslint.executeAutofix",
        "when": "editorTextFocus && !editorReadonly"
-     }    
+     }
    ]
    ```
 
-## License
+   ##
+
+   ## License
 
 Apache-2 © Kelsus
