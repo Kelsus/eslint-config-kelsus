@@ -61,7 +61,7 @@ publish/*
 
 # PRETTIER
 
-On Kelsus, we use [Prettier](https://prettier.io) as source for Opinionated Code Formatting.
+On Kelsus, we are proud to use [Prettier](https://prettier.io) as source for Opinionated Code Formatting.
 
 > `kelsus` ESLint configuration already extends `prettier` that will turns off all rules that are unnecessary or might conflict with Prettier.
 
