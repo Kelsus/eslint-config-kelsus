@@ -1,0 +1,32 @@
+# Circle CI 2.0 Especification
+version: 2
+jobs:
+  build:
+    # Docker image selected.
+    docker:
+      - image: 'kelsus/circleci-node-6.10:1.0'
+    # Setup the ENV VARIABLES used in the  consequent steps. 
+    environment:    
+      # The Service Name must be the same you have in your package.json, Dockerfile &
+      # docker-compose.yml.
+      SERVICE_NAME: eslint-config-kelsus
+      # Git User Email & Name
+      GIT_USER_EMAIL: ci@kelsus.com
+      GIT_USER_NAME: CircleCI
+    branches:
+      only:
+        - master
+    steps:
+      # Enables a mode of the shell where all executed commands are printed to the terminal.
+      - run: set -x
+      # Checking out the project from the repository.
+      - checkout
+      - run:
+          name: Allow access to private npm.
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc
+      - run:  
+          name: Configure git to commit and push the tag.
+          command: git config --global user.email $GIT_USER_EMAIL && git config --global user.name $GIT_USER_NAME && git branch -u origin/$CIRCLE_BRANCH
+      - deploy: 
+          name: Test, build and deploy npm package
+          command: npm run deploy

@@ -57,5 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
-# Babel build folder
-build/
+# Build Output
+dist/
+publish/
+
+# NPM configuration
+.npmrc
