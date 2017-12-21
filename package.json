@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/Kelsus/eslint-config-kelsus.git"
   },
-  "author": "Kelsus",
+  "author": "Kelsus Team",
   "engines": {
     "node": ">=0.10.0"
   },
