@@ -124,8 +124,6 @@ Add `prettier` configuration to the `package.json`.
    ]
    ```
 
-   ##
-
    ## License
 
 Apache-2 © Kelsus
