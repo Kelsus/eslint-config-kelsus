@@ -4,7 +4,7 @@
 
 ## Installation
 
-```
+```bash
 $ yarn add eslint eslint-config-kelsus --dev
 ```
 
@@ -13,7 +13,7 @@ $ yarn add eslint eslint-config-kelsus --dev
 Once the `eslint-config-kelsus` package is installed, you can use it by specifying `kelsus` in the [`extends`](http://eslint.org/docs/user-guide/configuring#extending-configuration-files) section of your [ESLint configuration](http://eslint.org/docs/user-guide/configuring).
 
 ### Create a config file.
-```sh
+```bash
 touch .eslintrc.json
 ```
 Add `eslint` configuration to it.
@@ -67,9 +67,8 @@ On Kelsus, we use [Prettier](https://prettier.io) as source for Opinionated Code
 
 ## Installation
 
-```
-$ yarn add eslint-config-prettier --dev
-$ yarn add eslint-plugin-prettier --dev
+```js
+yarn add --dev prettier eslint-plugin-prettier
 ```
 
 ## Add scripts to your `package.json`
