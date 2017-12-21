@@ -13,7 +13,7 @@
   },
   "scripts": {
     "test": "node test/test.js",
-    "preversion": "npm && npm run test",
+    "preversion": "npm install && npm run test",
     "version": "echo Nothing to see here",
     "postversion": "git push && git push --tags",
     "deploy":
