@@ -156,6 +156,12 @@ npm run test
    ]
    ```
 
+# FAQ
+
+  > I can't get the linter to work.
+
+    Have you checked if there are other configuration files for eslint or prettier (.eslintrc, .prettierrc)? if yes, remove them and try again.
+
    ## License
 
 Apache-2 © Kelsus
