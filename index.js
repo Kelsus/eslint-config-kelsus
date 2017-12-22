@@ -29,8 +29,6 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": "error"
-  },
-  rules: {
     // The rules below are listed in the order they appear on the eslint
     // rules page. All rules are listed to make it easier to keep in sync
     // as new ESLint rules are added.
