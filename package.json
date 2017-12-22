@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-kelsus",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "ESLint shareable config for the Kelsus style",
   "license": "Apache-2.0",
   "repository": {
