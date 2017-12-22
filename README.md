@@ -158,10 +158,13 @@ npm run test
 
 # FAQ
 
-  > I can't get the linter to work.
+  1. I can't get the linter to work.
 
     Have you checked if there are other configuration files for eslint or prettier (.eslintrc, .prettierrc)? if yes, remove them and try again.
 
+  2. Docker gets stuck when I add the linting step.
+
+    Check that you are not running the linter on files that you don't need. Start by ensure that `node_modules` and your `build` folder is ignred.
    ## License
 
 Apache-2 © Kelsus
