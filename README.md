@@ -29,6 +29,18 @@ Add `eslint` configuration to the `package.json`.
 
 `kelsus` config extends `eslint:recommended` and `prettier`.
 
+`kelsus` also set the environment to:
+
+```json
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "sourceType": "module"
+  }
+}
+```
+
 There are several rules in the [`eslint:recommended` ruleset](http://eslint.org/docs/rules/) that Kelsus style enforces in your project.
 
 To see how the `kelsus` config compares with `eslint:recommended`, refer to the [source code of `index.js`](https://github.com/kelsus/eslint-config-kelsus/blob/master/index.js), which lists every ESLint rule along with whether (and how) it is enforced by the `kelsus` config.
@@ -75,12 +87,12 @@ yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
 
 Add `prettier` configuration to the `package.json`.
 
-```js
+```json
 {
   "prettier": {
     "printWidth": 100,
     "singleQuote": true
-  },
+  }
 }
 ```
 
@@ -102,6 +114,12 @@ Add `prettier` configuration to the `package.json`.
 * "format": This will format your code with `prettier`.
 * "lint": This script will report errors and warnings of your code, based on the eslint-rules of your configuration.
 * "lint-errors": This script will report only errors of your code, based on the eslint-rules of your configuration.
+
+note: Lint can autofix errors, to do that, you can run
+
+```js
+`$ yarn run lint-errors -- --fix`;
+```
 
 # DOCKER
 
