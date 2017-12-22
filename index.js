@@ -18,6 +18,7 @@
 
 module.exports = {
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
+  plugins: ["prettier"],
   env: {
     es6: true,
     node: true
@@ -25,6 +26,9 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 6,
     sourceType: "module"
+  },
+  rules: {
+    "prettier/prettier": "error"
   },
   rules: {
     // The rules below are listed in the order they appear on the eslint
