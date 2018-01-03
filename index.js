@@ -140,7 +140,7 @@ module.exports = {
     // 'no-unused-expressions': 0,
     // 'no-unused-labels': 2, // eslint:recommended
     // 'no-useless-call': 0,
-    // 'no-useless-concat': 0,
+    'no-useless-concat': 2,
     // 'no-useless-escape': 0,
     // 'no-void': 0,
     // 'no-warning-comments': 0,
