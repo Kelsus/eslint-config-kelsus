@@ -324,7 +324,7 @@ module.exports = {
     // 'prefer-numeric-literals': 0,
     // 'prefer-rest-params': 2,
     // 'prefer-spread': 2,
-    // 'prefer-template': 0,
+    'prefer-template': 2,
     // 'require-yield': 2, // eslint:recommended
     // 'rest-spread-spacing': 2,
     // 'sort-imports': 0,
