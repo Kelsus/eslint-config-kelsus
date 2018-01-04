@@ -140,7 +140,7 @@ module.exports = {
     // 'no-unused-expressions': 0,
     // 'no-unused-labels': 2, // eslint:recommended
     // 'no-useless-call': 0,
-    // 'no-useless-concat': 0,
+    'no-useless-concat': 2,
     // 'no-useless-escape': 0,
     // 'no-void': 0,
     // 'no-warning-comments': 0,
@@ -324,7 +324,7 @@ module.exports = {
     // 'prefer-numeric-literals': 0,
     // 'prefer-rest-params': 2,
     // 'prefer-spread': 2,
-    // 'prefer-template': 0,
+    'prefer-template': 2,
     // 'require-yield': 2, // eslint:recommended
     // 'rest-spread-spacing': 2,
     // 'sort-imports': 0,
