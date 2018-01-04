@@ -118,7 +118,7 @@ module.exports = {
     // 'no-labels': 0,
     // 'no-lone-blocks': 0,
     // 'no-loop-func': 0,
-    // 'no-magic-numbers': 0,
+    'no-magic-numbers': 2,
     // 'no-multi-spaces': 2,
     // 'no-multi-str': 2,
     // 'no-new': 0,
