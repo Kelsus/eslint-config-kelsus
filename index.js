@@ -18,7 +18,7 @@
 
 module.exports = {
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
-  plugins: ["prettier"],
+  plugins: ["prettier", "chai-friendly"],
   env: {
     es6: true,
     node: true
@@ -137,7 +137,8 @@ module.exports = {
     // 'no-sequences': 0,
     // 'no-throw-literal': 2, // eslint:recommended
     // 'no-unmodified-loop-condition': 0,
-    // 'no-unused-expressions': 0,
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 2 //
     // 'no-unused-labels': 2, // eslint:recommended
     // 'no-useless-call': 0,
     'no-useless-concat': "error",
