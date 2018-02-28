@@ -14,31 +14,30 @@
  * limitations under the License.
  */
 
-'use strict';
+"use strict";
 
-const assert = require('assert');
-const eslint = require('eslint');
-const conf = require('../');
+const assert = require("assert");
+const eslint = require("eslint");
+const conf = require("../");
 
 // The source files to lint.
-const repoFiles = [
-  'index.js',
-  'test/test.js',
-];
+const repoFiles = ["index.js", "test/test.js"];
 
 // Use the rules defined in this repo to test against.
 const eslintOpts = {
   useEslintrc: false,
-  envs: ['node', 'es6'],
-  parserOptions: {ecmaVersion: 2017},
-  rules: conf.rules,
+  extends: conf.extends,
+  plugins: conf.plugins,
+  env: conf.env,
+  parserOptions: conf.parserOptions,
+  rules: conf.rules
 };
 
 // Runs the linter on the repo files and asserts no errors were found.
 const ZERO = 0;
 const report = new eslint.CLIEngine(eslintOpts).executeOnFiles(repoFiles);
-assert.equal(report.errorCount, ZERO);
-assert.equal(report.warningCount, ZERO);
+assert.equal(report.errorCount, ZERO, `Error Count`);
+assert.equal(report.warningCount, ZERO, "Warning Count");
 repoFiles.forEach((file, index) => {
   assert(report.results[index].filePath.endsWith(file));
 });
