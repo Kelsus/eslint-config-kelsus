@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-kelsus",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "description": "ESLint shareable config for the Kelsus style",
   "license": "Apache-2.0",
   "repository": {
@@ -16,11 +16,16 @@
     "preversion": "npm install && npm run test",
     "version": "echo Nothing to see here",
     "postversion": "git push && git push --tags",
-    "deploy":
-      "npm version patch --message \"Deployment version %s [skip ci]\" && npm publish"
+    "deploy": "npm version patch --message \"Deployment version %s [skip ci]\" && npm publish"
   },
-  "files": ["index.js"],
-  "keywords": ["kelsus", "code", "quality"],
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "kelsus",
+    "code",
+    "quality"
+  ],
   "dependencies": {
     "eslint": "^4.1.1",
     "eslint-config-prettier": "^2.9.0",
