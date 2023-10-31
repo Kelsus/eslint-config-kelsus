@@ -19,7 +19,8 @@
     "deploy": "npm version patch --message \"Deployment version %s [skip ci]\" && npm publish"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "eslintrc.js"
   ],
   "keywords": [
     "kelsus",
